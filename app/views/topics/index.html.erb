@@ -1,0 +1,24 @@
+<div crass="wrapper">
+  <div class="topic-top">
+    <h1>ゲレンデで繋がろう</h1>
+    <p>ウインタースポーツの情報交換、セッションを活発にして仲間を作ろう</p>
+  </div>
+
+  <h1>トピック作成</h1>
+  <%= form_with(model: @newtopic, local: true) do |f| %>
+    <%= f.text_field :title%>
+    <%= f.submit "作成"%>
+  <% end%>
+  <h1>トピック一覧</h1>
+  <ul>
+    <% @topics.each do |topic|%>
+      <li>
+        <span class="created-at"><%= topic.created_at%></span><br />
+        <%= link_to topic.title, topic_path(topic.id)%>
+        <%= link_to "[削除]", topic_path(topic.id), method: :delete %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+

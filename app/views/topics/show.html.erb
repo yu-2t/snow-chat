@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="topic-content">
+    <h1><%=@topic.title%></h1>
+    <h1>コメント投稿</h1>
+    <%= form_with(model: [@topic,@text], local: true) do |f| %>
+      <%= f.text_area :text, class: "text-area"%>
+      <%= f.submit "投稿"%>
+    <% end%>
+    <%= link_to "トピック一覧へ戻る",  "/topics" %>
+  </div>
+  <div class="comment-content">
+  <ul class="show-li">
+    <% @texts.each do |t|%>
+    <div class="comment-border">
+      <li>
+        <span class="created-at"><%= t.created_at%></span><br/>
+        <p class="content"><%= simple_format(t.text)%></p>
+      </li>
+    </div>
+    <%end%>
+  </ul>
+  </div>
+</div>
+

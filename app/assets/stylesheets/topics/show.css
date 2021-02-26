@@ -1,0 +1,34 @@
+.wrapper{
+  width:100%;
+  margin:0 auto;
+}
+.topic-content{
+  width:80%;
+  margin:0 0 0 40%;
+}
+
+.comment-border{
+  border-bottom:1px solid gray ;
+  padding-bottom:15px;
+}
+
+.show-li{
+  list-style:none;
+}
+
+li{
+  width:80%;
+}
+
+.comment-content{
+  width:80%;
+  margin:0 auto;
+}
+
+*{
+  word-break:break-all 
+}
+
+.text-area{
+  white-space: pre-wrap;
+}
