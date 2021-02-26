@@ -4,6 +4,14 @@
     <p>ウインタースポーツの情報交換、セッションを活発にして仲間を作ろう</p>
   </div>
 
+  <h1>
+  トピック検索
+</h1>
+<%= search_form_for @p, url: search_topics_path do |f| %>
+  
+  <%= f.search_field :title_cont %>
+  <%= f.submit '検索' %>
+<% end %>
   <h1>トピック作成</h1>
   <%= form_with(model: @newtopic, local: true) do |f| %>
     <%= f.text_field :title%>
