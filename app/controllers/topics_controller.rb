@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  before_action :search_product, only: [:index, :search]
+
   def index
     @topics = Topic.all.order("created_at DESC")
     @newtopic = Topic.new
@@ -26,8 +28,17 @@ class TopicsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def search
+    @results = @p.result  
+  end
+
   private
   def topic_params
     params.require(:topic).permit(:title)
+  end
+
+  def search_product
+    @p = Topic.ransack(params[:q]) 
   end
 end

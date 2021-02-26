@@ -1,0 +1,10 @@
+<h1>トピック一覧</h1>
+  <ul>
+    <% @results.each do |topic|%>
+      <li>
+        <span class="created-at"><%= topic.created_at%></span><br />
+        <%= link_to topic.title, topic_path(topic.id)%>
+        <%= link_to "[削除]", topic_path(topic.id), method: :delete %>
+      </li>
+    <% end %>
+  </ul>
