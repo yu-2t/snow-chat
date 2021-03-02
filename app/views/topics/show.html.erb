@@ -1,8 +1,11 @@
 <div class="wrapper">
   <div class="topic-content">
     <h1><%=@topic.title%></h1>
-    <h1>コメント投稿</h1>
+    
     <%= form_with(model: [@topic,@text], local: true) do |f| %>
+      <h1>名前を入力</h1>
+      <%= f.text_field :name, class:"name-field"%><br />
+      <h1>コメント投稿</h1>
       <%= f.text_area :text, class: "text-area"%>
       <%= f.submit "投稿"%>
     <% end%>
@@ -14,6 +17,11 @@
     <div class="comment-border">
       <li>
         <span class="created-at"><%= t.created_at%></span><br/>
+        <%if t.name.blank? %>
+          <p>name:名無しさん</p>
+        <%else%>
+          <p>name:<%= t.name%></p>
+        <%end%>
         <p class="content"><%= simple_format(t.text)%></p>
       </li>
     </div>

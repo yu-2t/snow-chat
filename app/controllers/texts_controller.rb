@@ -11,6 +11,6 @@ class TextsController < ApplicationController
   private
 
   def params_text
-    params.require(:text).permit(:text).merge(topic_id: params[:topic_id])
+    params.require(:text).permit(:text,:name).merge(topic_id: params[:topic_id])
   end
 end
