@@ -11,6 +11,7 @@
     <% end%>
     <%= link_to "トピック一覧へ戻る",  "/topics" %>
   </div>
+  
   <div class="comment-content">
   <ul class="show-li">
     <% @texts.each do |t|%>
@@ -23,6 +24,7 @@
           <p>name:<%= t.name%></p>
         <%end%>
         <p class="content"><%= simple_format(t.text)%></p>
+        <%= link_to "返信", topic_text_path(t.topic_id, t.id) %>
       </li>
     </div>
     <%end%>

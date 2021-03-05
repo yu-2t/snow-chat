@@ -1,0 +1,44 @@
+<div class="wrapper">  
+  <div class="topic-content">
+    <p>コメント</p>
+    <% @text.each do |text|%>
+      <%if text.name.blank? %>
+            <p>name:名無しさん</p>
+          <%else%>
+            <p>name:<%= text.name%></p>
+          <%end%>
+      <p><%= text.text%></p>
+    <%end%>
+  </div>
+  
+  <div class="topic-content">
+    <%= form_for  @comment, url: comments_path, local: true do |f|%>
+      <h1>名前入力</h1>
+      <%= f.text_field :name, class:"name-field"%><br/>
+      <h1>返信入力</h1>
+      <%= f.text_area :post, class: "text-area"%>
+      <%= f.hidden_field :topic_id %>
+      <%= f.hidden_field :text_id %>
+      <%= f.submit "投稿"%>
+    <%end%>
+    <%= link_to "コメント一覧へ戻る", topic_path(params[:topic_id])%>
+  </div>
+
+  <div class="comment-content">
+    <ul class="show-li">
+      <% @comments.each do |comment|%>
+      <div class="comment-border">
+        <li>
+          <%if comment.name.blank? %>
+            <p>name:名無しさん</p>
+          <%else%>
+            <p>name:<%= comment.name%></p>
+          <%end%>
+          <p class="content"><%= simple_format(comment.post)%></p>
+        </li>
+      </div>
+      <%end%>
+    </ul>
+  </div>
+</div>
+  
