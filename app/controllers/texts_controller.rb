@@ -7,6 +7,13 @@ class TextsController < ApplicationController
       redirect_to topic_path(params[:topic_id])
     end
   end
+
+  def show
+    @text = Text.where(id: params[:id])
+    @topic = Topic.where(id: params[:topic_id])
+    @comment = Comment.new(topic_id: @topic.ids, text_id: @text.ids)
+    @comments = Comment.where(text_id: params[:id])
+  end
    
   private
 
