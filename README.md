@@ -1,24 +1,22 @@
-# README
+# アップリケーション名
+Snow Link
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 概要
+ウインタースポーツ好きな人たちがコミニュケーションをとる事ができます。
 
-Things you may want to cover:
+# URL
+https://snow-chat.herokuapp.com/
 
-* Ruby version
+# 利用方法
+ゲレンデ名でトピックなどを作成して、その日のゲレンデの状況などを投稿したりします。また、同じゲレンデに来ている人と繋がる事もできます。
 
-* System dependencies
+# 対象
+一番の対象者は30代です。20代の頃にウインタースポーツを楽しんでいたが、生活環境の変化などで一緒に行く仲間が減少してしまった人同士を繋ぎたいです。
+また、学生さんなど交通費を浮かせたい人にも利用して欲しいです。
+ゲレンデ人口が増えてゲレンデの力にもなれたら最高です。
 
-* Configuration
+#　機能
+トピックを立てて、トピックのページに遷移して会話できます。
+気になる会話には返信する事が可能なので、気になる投稿者と話す事ができます。
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
