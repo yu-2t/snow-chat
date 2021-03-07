@@ -22,3 +22,5 @@ https://snow-chat.herokuapp.com/
 # ER図
 ![ER](https://user-images.githubusercontent.com/71489332/110242163-2bb57180-7f98-11eb-826c-f59eb615a6a0.png)
 
+# 今後の作業
+CSSでの装飾・ユーザー機能を実装するかの検討（現状では気軽に使えるように無しの方向)
