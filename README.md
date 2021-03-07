@@ -18,3 +18,6 @@ https://snow-chat.herokuapp.com/
 # 機能
 トピックを立てて、トピックのページに遷移して会話できます。
 気になる会話には返信する事が可能なので、気になる投稿者と話す事ができます。
+
+#ER図
+![ER](https://user-images.githubusercontent.com/71489332/110242136-fc066980-7f97-11eb-8ad5-4441a2e8f9b6.png)
