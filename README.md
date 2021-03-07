@@ -20,4 +20,5 @@ https://snow-chat.herokuapp.com/
 気になる会話には返信する事が可能なので、気になる投稿者と話す事ができます。
 
 #ER図
-![ER](https://user-images.githubusercontent.com/71489332/110242136-fc066980-7f97-11eb-8ad5-4441a2e8f9b6.png)
+![ER](https://user-images.githubusercontent.com/71489332/110242163-2bb57180-7f98-11eb-826c-f59eb615a6a0.png)
+
