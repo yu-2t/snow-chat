@@ -1,32 +1,38 @@
 <div crass="wrapper">
-  <div class="topic-top">
-    <h1>ゲレンデで繋がろう</h1>
-    <p>ウインタースポーツの情報交換、セッションを活発にして仲間を作ろう</p>
+  <div class="topic-wrapper">
+    <div class="left-container">
+      <div class="topic-top">
+        <h1>ゲレンデで繋がろう</h1>
+        <p>ウインタースポーツの情報交換、セッションを活発にして仲間を作ろう</p>
+      
+      
+        <h1>
+        【トピック検索】
+        </h1>
+        <%= search_form_for @p, url: search_topics_path do |f| %>
+          <%= f.search_field :title_cont, class: "title-search" %>
+          <%= f.submit '検索', class:"btn" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="right-container">
+      <h1>【トピック作成】</h1>
+      <%= form_with(model: @newtopic, local: true) do |f| %>
+        <%= f.text_field :title, class: "title-text" %>
+        <%= f.submit "作成", class:"btn"%>
+      <% end%>
+      <h1>【トピック一覧】</h1>
+      <ul>
+        <% @topics.each do |topic|%>
+          <li>
+            <span class="created-at"><%= topic.created_at%></span><br />
+            <%= link_to topic.title, topic_path(topic.id)%>
+            <%= link_to "[削除]", topic_path(topic.id), method: :delete %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-
-  <h1>
-  【トピック検索】
-</h1>
-<%= search_form_for @p, url: search_topics_path do |f| %>
-  
-  <%= f.search_field :title_cont %>
-  <%= f.submit '検索' %>
-<% end %>
-  <h1>【トピック作成】</h1>
-  <%= form_with(model: @newtopic, local: true) do |f| %>
-    <%= f.text_field :title%>
-    <%= f.submit "作成"%>
-  <% end%>
-  <h1>【トピック一覧】</h1>
-  <ul>
-    <% @topics.each do |topic|%>
-      <li>
-        <span class="created-at"><%= topic.created_at%></span><br />
-        <%= link_to topic.title, topic_path(topic.id)%>
-        <%= link_to "[削除]", topic_path(topic.id), method: :delete %>
-      </li>
-    <% end %>
-  </ul>
 </div>
 
 

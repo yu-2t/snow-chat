@@ -1,0 +1,59 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+.created-at{
+  color:gray;
+  font-size:13px;
+}
+
+.topic-wrapper{
+  display: flex;
+}
+
+.right-container{
+height:100vh;
+width: 360px;
+background-color: lightblue;
+padding:10px;
+
+}
+
+.left-container{
+  height: 100vh;
+  width: calc(100vw - 360px);
+  background-color: lightblue; 
+  padding: 10px;
+  background-image: image-url('DSC_0710.JPG');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li{
+  list-style: none;
+}
+
+.topic-top{
+  font-size:24px;
+  color:white;
+  text-align: center;
+  
+}
+
+.title-text{
+  height:25px;
+  width:20vw;
+}
+
+.title-search{
+  height:30px;
+  width:30vw;
+}
+
+.btn{
+  height:30px;
+  width:50px;
+}

@@ -32,3 +32,7 @@ li{
 .text-area{
   white-space: pre-wrap;
 }
+
+.title{
+  font-size:48px;
+}

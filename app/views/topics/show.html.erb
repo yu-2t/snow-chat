@@ -1,11 +1,11 @@
 <div class="wrapper">
   <div class="topic-content">
-    <h1><%=@topic.title%></h1>
+    <h1 class="title"><%=@topic.title%></h1>
     
     <%= form_with(model: [@topic,@text], local: true) do |f| %>
-      <h1>名前を入力</h1>
+      <h2>【名前を入力】</h2>
       <%= f.text_field :name, class:"name-field"%><br />
-      <h1>コメント投稿</h1>
+      <h2>【コメント投稿】</h2>
       <%= f.text_area :text, class: "text-area"%>
       <%= f.submit "投稿"%>
     <% end%>
